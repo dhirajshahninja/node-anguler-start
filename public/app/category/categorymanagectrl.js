@@ -12,7 +12,6 @@
 
          //definetions
         function save() {
-            alert("demo");
             if(vm.oCategory){
                 Category.save(vm.oCategory,function (data) {
                   Notification.success(data.message);

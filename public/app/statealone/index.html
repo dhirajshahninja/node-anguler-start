@@ -1,0 +1,14 @@
+<div>
+    <h2> State Alone list</h2>
+    <hr/>
+    <div>
+        <ul>
+            {{ vm.name }}
+            <li ng-repeat="oStatealone in vm.listStatealone" >
+                <p>{{ oStatealone.Name }} <a href ng-click="vm.deleteStatealone(oStatealone)" >Delete</a> </p>
+
+            </li>
+        </ul>
+    </div>
+    <b></b>
+</div>

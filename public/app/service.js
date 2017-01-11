@@ -6,4 +6,9 @@ angular
     .factory('Category', function($resource) {
     return $resource('http://localhost:4042/slideshow', {
       });
+})
+    .factory('Statealone', function ($resource) {
+    return $resource('http://localhost:4042/statealone',{
+    });
 });
+

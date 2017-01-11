@@ -21,7 +21,13 @@
             templateUrl:'app/customer/index.html',
             controller:'CustomerListCtrl',
             controllerAs :'vm'
-        });
+        })
+          .state('statealone',{
+              url:'/statealone',
+              templateUrl:'app/statealone/index.html',
+              controller:'StatealoneListCtrl',
+              controllerAs :'vm'
+          })
     })
     .run(function ($state) {
       $state.go('category');

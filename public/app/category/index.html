@@ -3,9 +3,11 @@
   <hr/>
   <div>
       <ul>
-        <li ng-repeat="category in vm.categories.images" >
-          <p>{{ category.description }}</p>
-            <p>{{ category.total }}</p>
+        <p>{{ vm.categories.total }}</p>
+
+        <li ng-repeat="oCategory in vm.categories.images" >
+          <p>{{ oCategory.description }} <a href ng-click="vm.deleteCategory(oCategory)">Delete</a></p>
+
         </li>
       </ul>
   </div>

@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+#IDEA
+.idea
+
+#NODE MODULES
+node_modules
+

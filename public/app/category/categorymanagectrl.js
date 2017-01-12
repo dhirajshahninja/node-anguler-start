@@ -3,7 +3,7 @@
     angular.module('app').controller('CategoryManageCtrl',CategoryManageCtrl);
     /** @ngInject */
     function CategoryManageCtrl($scope,$http,Category,Notification,$state) {
-        var vm=this;
+        var vm = this;
 
         vm.oCategory = new Category();
 

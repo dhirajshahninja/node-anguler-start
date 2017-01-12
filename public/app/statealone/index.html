@@ -5,7 +5,9 @@
         <ul>
             {{ vm.name }}
             <li ng-repeat="oStatealone in vm.listStatealone" >
-                <p>{{ oStatealone.Name }} <a href ng-click="vm.deleteStatealone(oStatealone)" >Delete</a> </p>
+                <p>{{ oStatealone.Name }} <a href ng-click="vm.deleteStatealone(oStatealone)" >Delete</a>
+                     <a href ui-sref="manageStatealone({id:'{{oStatealone._id}}'})"> Update</a>
+                </p>
 
             </li>
         </ul>

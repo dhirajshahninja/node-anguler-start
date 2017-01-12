@@ -7,8 +7,14 @@ angular
     return $resource('http://localhost:4042/slideshow', {
       });
 })
-    .factory('Statealone', function ($resource) {
-    return $resource('http://localhost:4042/statealone',{
+    .factory('StateAlone', function ($resource) {
+    return $resource('http://localhost:4042/statealone/:id',{id: '@_id'},{
+        update:{
+            method: 'PUT'
+        },
+        create:{
+            method: 'POST'
+        }
     });
 });
 

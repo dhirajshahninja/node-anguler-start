@@ -9,6 +9,8 @@
 
         vm.listStatealone=StateAlone.query();
         // function
+
+
         vm.deleteStatealone=deleteStatealone;
 
         //definetions

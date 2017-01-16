@@ -14,7 +14,7 @@ app.use(bodyparser.urlencoded({limit:'50mb',extended:true}));
 app.use(require('./routes/index'));
 
 app.get('/',function(req,res){
-  res.sendFile(__dirname + '/public/app/index.html');
+  res.sendFile(__dirname + '/public/app/shared/index.html');
 });
 
 connection.init();

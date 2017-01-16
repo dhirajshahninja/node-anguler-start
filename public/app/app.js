@@ -3,6 +3,22 @@
     angular.module('app', ['ui.router', 'ngResource', 'app.services', 'ui-notification']);
     angular.module('app')
         .config(function ($stateProvider, $urlRouterProvider) {
+
+            $stateProvider
+                .state('app', {
+                    url: '/app',
+                    abstract: true,
+                    templateUrl: 'app/shared/app.html'
+                });
+            //
+            // $urlRouterProvider.otherwise(function ($injector) {
+            //     var $state = $injector.get('$state');
+            //     $state.go('app.categories');
+            // });
+
+
+
+
             $stateProvider
                 .state('category', {
                     url: '/category',
@@ -34,8 +50,14 @@
                     controller: 'StateAloneManageCtrl',
                     controllerAs: 'vm'
                 })
+                .state('app.admin', {
+                    url: '/home',
+                    templateUrl: 'app/home/index.html',
+                    controller: 'AdminHomeCtrl',
+                    controllerAs: 'vm'
+                });
         })
         .run(function ($state) {
-            $state.go('category');
+            $state.go('app.admin');
         });
 })();

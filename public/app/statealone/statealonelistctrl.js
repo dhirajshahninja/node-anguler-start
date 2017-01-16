@@ -1,17 +1,19 @@
 (function () {
     'use strict';
-        angular.module('app').controller('StatealoneListCtrl', StatealoneListCtrl);
+    angular.module('app')
+        .controller('StatealoneListCtrl', StatealoneListCtrl);
+
     /** @ngInject */
-    function StatealoneListCtrl($scope,$http,StateAlone, Notification, $state) {
+    function StatealoneListCtrl($scope, $http, StateAlone, Notification, $state) {
 
         var vm = this;
         vm.name = "NODE Angular";
 
-        vm.listStatealone=StateAlone.query();
+        vm.listStatealone = StateAlone.query();
         // function
 
 
-        vm.deleteStatealone=deleteStatealone;
+        vm.deleteStatealone = deleteStatealone;
 
         //definetions
         function deleteStatealone(oStatealone) {
@@ -25,4 +27,4 @@
 
         }
     }
-})()
+})();
